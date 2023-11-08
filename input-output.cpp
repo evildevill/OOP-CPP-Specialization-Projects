@@ -1,3 +1,21 @@
+// Insertion Operator (<<) is used to insert the data into the output stream.
+// Extraction Operator (>>) is used to extract the data from the input stream.
+
+// endl is used to insert a new line character and flushes the stream. It is equivalent to '\n' in c++ Language.
+// endl is defined in the iostream header file.
+
+// cin is a predefined variable that reads data from the keyboard with the extraction operator (>>)
+// cout is a predefined variable that writes data to the screen with the insertion operator (<<)
+
+// int x; 
+// cout << "Type a number: "; // Type a number and press enter
+// cin >> x; // Get user input from the keyboard
+// cout << "Your number is: " << x; // Display the input value
+
+// Good To Know
+// cout is pronounced "see-out". Used for output, and uses the insertion operator (<<)
+// cin is pronounced "see-in". Used for input, and uses the extraction operator (>>)
+
 // Simple C++ program to print "Hello World"
 // #include <iostream>
 // using namespace std;
@@ -27,12 +45,3 @@ int main (){
     system("cls");
     return 0;
 }
-
-// Insertion Operator (<<) is used to insert the data into the output stream.
-// Extraction Operator (>>) is used to extract the data from the input stream.
-
-// endl is used to insert a new line character and flushes the stream. It is equivalent to '\n' in c++ Language.
-// endl is defined in the iostream header file.
-
-// cin is an object of the iostream class and is used to read input from the standard input device (keyboard).
-// cout is an object of the iostream class and is used to write on the standard output device (monitor).
