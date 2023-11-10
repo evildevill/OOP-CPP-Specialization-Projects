@@ -1,15 +1,14 @@
-#include <iostream>  // Include the iostream library
-#include <unistd.h>  // for sleep() function
-#include <cstdlib>   // for system("cls") function
-using namespace std; // Using the standard namespace
+#include <iostream>
+#include <unistd.h>
+#include <cstdlib>
+
+using namespace std;
 
 void PrintMenu()
 {
-    // Print the menu
     cout << "==============================================" << endl;
-    cout << "====Welcome to the Cryptocurrency Exchaneg====" << endl;
+    cout << "====Welcome to the Cryptocurrency Exchange====" << endl;
     cout << "==============================================" << endl;
-    // cout << endl; // Print a new line
     cout << "1: Print Help" << endl;
     cout << "2: Print Exchange Stats" << endl;
     cout << "3: Make an offer" << endl;
@@ -19,33 +18,29 @@ void PrintMenu()
     cout << "7: Quit" << endl;
 }
 
-int main() // Main function
+int main()
 {
-    // Print the menu
-    PrintMenu();
-    int UserOption;                                 // Variable to store user input
-    cout << "============================" << endl; // Print the menu
-    cout << "Enter your choice (1 - 6): ";          // Get user input for the option number
-    cin >> UserOption;                              // Store the user input in the variable
-    cout << "You Entered: " << UserOption << endl;  // Print the user input
-    cout << "============================" << endl; // Print the menu
-    while (true)                                    // Check the user input and print the corresponding message
+    while (true)
     {
+        PrintMenu();
+        int UserOption;
+        cout << "============================" << endl;
+        cout << "Enter your choice (1 - 7): ";
+        cin >> UserOption;
+
+        cout << "You Entered: " << UserOption << endl;
+        cout << "============================" << endl;
+
         if (UserOption == 0) // Bad Choice
         {
             cout << "Invalid Choice :(" << endl;
-            cout << "Please enter a number between 1 to 6" << endl;
-            // Pause the program for 2 seconds.
+            cout << "Please enter a number between 1 to 7" << endl;
             sleep(2);
-            // Clear the screen.
             system("cls");
-            // Print the menu 
-            PrintMenu();
         }
         else if (UserOption == 1) // Print Help
         {
-
-            cout << "Help - Your Aim is to make money. Analyse the market and makes bid" << endl;
+            cout << "Help - Your Aim is to make money. Analyze the market and make a bid" << endl;
         }
         else if (UserOption == 2) // Print Exchange Stats
         {
@@ -53,11 +48,11 @@ int main() // Main function
         }
         else if (UserOption == 3) // Make an offer
         {
-            cout << "Make an offer - Please Enter Your desire amount" << endl;
+            cout << "Make an offer - Please Enter Your desired amount" << endl;
         }
         else if (UserOption == 4) // Make a bid
         {
-            cout << "Make a bid - Please Enter Your desire amount" << endl;
+            cout << "Make a bid - Please Enter Your desired amount" << endl;
         }
         else if (UserOption == 5) // Print Wallet
         {
@@ -65,17 +60,19 @@ int main() // Main function
         }
         else if (UserOption == 6) // Continue
         {
-            cout << "Going to next Time Frame" << endl;
+            cout << "Going to the next Time Frame" << endl;
         }
         else if (UserOption == 7) // Quit
         {
             cout << "Quit" << endl;
+            break; // Exit the loop if the user chooses to quit
         }
         else // Bad Choice
         {
             cout << "Invalid Choice :(" << endl;
-            cout << "Please enter a number between 1 to 6" << endl;
+            cout << "Please enter a number between 1 to 7" << endl;
         }
     }
+
     return 0;
 }
