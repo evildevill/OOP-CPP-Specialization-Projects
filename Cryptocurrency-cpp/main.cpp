@@ -18,6 +18,41 @@ void PrintMenu()
     cout << "7: Quit" << endl;
 }
 
+void PrintHelp()
+{
+    cout << "Help - Your Aim is to make money. Analyze the market and make a bid" << endl;
+}
+
+void PrintExchangeStats()
+{
+    cout << "Exchange Stats - Looks Good" << endl;
+}
+
+void MakeAnOffer()
+{
+    cout << "Make an offer - Please Enter Your desired amount" << endl;
+}
+
+void MakeABid()
+{
+    cout << "Make a bid - Please Enter Your desired amount" << endl;
+}
+
+void PrintWallet()
+{
+    cout << "Wallet - Your Wallet is empty :(" << endl;
+}
+
+void Continue()
+{
+    cout << "Continue - Going to the next Time Frame" << endl;
+}
+
+void Quit()
+{
+    cout << "Quit - Bye Bye" << endl;
+}
+
 int getUserOption()
 {
     int UserOption;
@@ -40,32 +75,31 @@ void ProcessUserOption(int UserOption)
     }
     else if (UserOption == 1) // Print Help
     {
-        cout << "Help - Your Aim is to make money. Analyze the market and make a bid" << endl;
+        PrintHelp();
     }
     else if (UserOption == 2) // Print Exchange Stats
     {
-        cout << "Exchange Stats - Looks Good" << endl;
+        PrintExchangeStats();
     }
     else if (UserOption == 3) // Make an offer
     {
-        cout << "Make an offer - Please Enter Your desired amount" << endl;
+        MakeAnOffer();
     }
     else if (UserOption == 4) // Make a bid
     {
-        cout << "Make a bid - Please Enter Your desired amount" << endl;
+        MakeABid();
     }
     else if (UserOption == 5) // Print Wallet
     {
-        cout << "Wallet - Your Wallet is empty :(" << endl;
+        PrintWallet();
     }
     else if (UserOption == 6) // Continue
     {
-        cout << "Going to the next Time Frame" << endl;
+        Continue();
     }
     else if (UserOption == 7) // Quit
     {
-        cout << "Quit" << endl;
-        // Exit the loop if the user chooses to quit
+        Quit(); // Exit the loop if the user chooses to quit
     }
     else // Bad Choice
     {
