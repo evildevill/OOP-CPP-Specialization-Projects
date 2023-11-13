@@ -1,12 +1,29 @@
-#include <iostream> // USED FOR INPUT AND OUTPUT
-#include <string>   // USED FOR STRINGS
-#include <vector>   // USED FOR VECTORS
-#include <unistd.h> // USED FOR SLEEP
-#include <cstdlib>  // USED FOR SYSTEM(CLS)
+#include <iostream>
+#include <string>
+#include <vector>
+#include <unistd.h>
+#include <cstdlib>
 
-using namespace std; // USED FOR STD FUNCTIONS
+using namespace std; 
 
-void PrintMenu() // PRINTS THE MENU
+enum class OrderBookType
+{
+    BID,
+    ASK,
+    SHOUT
+};
+
+class OderBookEntry
+{
+    public:
+        double Price; 
+        double Amount; 
+        string TimeStamp; 
+        string Product; 
+        OrderBookType OrderType;
+};
+
+void PrintMenu()
 {
     cout << "==============================================" << endl;
     cout << "====Welcome to the Cryptocurrency Exchange====" << endl;
@@ -20,105 +37,98 @@ void PrintMenu() // PRINTS THE MENU
     cout << "7: Quit" << endl;
 }
 
-void PrintHelp() // PRINTS THE HELP
+void PrintHelp()
 {
     cout << "Help - Your Aim is to make money. Analyze the market and make a bid" << endl;
 }
 
-void PrintExchangeStats() // PRINTS THE EXCHANGE STATS
+void PrintExchangeStats()
 {
     cout << "Exchange Stats - Looks Good" << endl;
 }
 
-void MakeAnOffer() // PRINTS THE MAKE AN OFFER
+void MakeAnOffer()
 {
     cout << "Make an offer - Please Enter Your desired amount" << endl;
 }
 
-void MakeABid() // PRINTS THE MAKE A BID
+void MakeABid()
 {
     cout << "Make a bid - Please Enter Your desired amount" << endl;
 }
 
-void PrintWallet() // PRINTS THE WALLET
+void PrintWallet()
 {
     cout << "Wallet - Your Wallet is empty :(" << endl;
 }
 
-void Continue() // PRINTS THE CONTINUE
+void Continue()
 {
     cout << "Continue - Going to the next Time Frame" << endl;
 }
 
-void Quit() // PRINTS THE QUIT
+void Quit()
 {
     cout << "Quit - Bye Bye" << endl;
 }
 
-int getUserOption() // GETS THE USER OPTION
+int getUserOption()
 {
-    int UserOption; // UserOption is an integer
+    int UserOption;
     cout << "============================" << endl;
     cout << "Enter your choice (1 - 7): ";
-    cin >> UserOption; // UserOption is the input
+    cin >> UserOption;
     cout << "You Entered: " << UserOption << endl;
     cout << "============================" << endl;
-    return UserOption; // Returns the UserOption
+    return UserOption;
 }
 
-void ProcessUserOption(int UserOption) // PROCESSES THE USER OPTION
+void ProcessUserOption(int UserOption)
 {
-    if (UserOption == 0) // Bad Choice
+    if (UserOption == 0)
     {
         cout << "Invalid Choice :(" << endl;
         cout << "Please enter a number between 1 to 7" << endl;
         sleep(1);
         system("cls");
     }
-    else if (UserOption == 1) // Print Help
+    else if (UserOption == 1)
     {
         PrintHelp();
     }
-    else if (UserOption == 2) // Print Exchange Stats
+    else if (UserOption == 2)
     {
         PrintExchangeStats();
     }
-    else if (UserOption == 3) // Make an offer
+    else if (UserOption == 3)
     {
         MakeAnOffer();
     }
-    else if (UserOption == 4) // Make a bid
+    else if (UserOption == 4)
     {
         MakeABid();
     }
-    else if (UserOption == 5) // Print Wallet
+    else if (UserOption == 5)
     {
         PrintWallet();
     }
-    else if (UserOption == 6) // Continue
+    else if (UserOption == 6)
     {
         Continue();
     }
-    else if (UserOption == 7) // Quit
+    else if (UserOption == 7)
     {
-        Quit(); // Exit the loop if the user chooses to quit
+        Quit();
     }
-    else // Bad Choice
+    else
     {
         cout << "Invalid Choice :(" << endl;
         cout << "Please enter a number between 1 to 7" << endl;
     }
 }
 
-int main() // MAIN FUNCTION
+int main()
 {
-    enum class OrderBookType
-    {
-        BID,
-        ASK,
-        SHOUT
-    }; // ENUM CLASS FOR ORDER BOOK TYPE
-
     // double Price = 5319.450228; // DOUBLE FOR PRICE
     // double Amount = 0.00020075; // DOUBLE FOR AMOUNT
     // string TimeStamp{"2023/11/13 17:01:24.884492"}; // STRING FOR TIMESTAMP
