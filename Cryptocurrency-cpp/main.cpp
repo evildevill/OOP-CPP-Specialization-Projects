@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <cstdlib>
 
-using namespace std; 
+using namespace std;
 
 enum class OrderBookType
 {
@@ -15,12 +15,25 @@ enum class OrderBookType
 
 class OderBookEntry
 {
-    public:
-        double Price; 
-        double Amount; 
-        string TimeStamp; 
-        string Product; 
-        OrderBookType OrderType;
+public:
+    OderBookEntry(double _Price,
+                  double _Amount,
+                  string _TimeStamp,
+                  string _Product,
+                  OrderBookType _OrderType)
+    {
+        Price = _Price;
+        Amount = _Amount;
+        TimeStamp = _TimeStamp;
+        Product = _Product;
+        OrderType = _OrderType;
+    }
+
+    double Price;
+    double Amount;
+    string TimeStamp;
+    string Product;
+    OrderBookType OrderType;
 };
 
 void PrintMenu()
@@ -154,8 +167,8 @@ int main()
     Products.push_back("BTC/USD");                      // PUSH BACK THE PRODUCT
     OrderTypes.push_back(OrderBookType::BID);           // PUSH BACK THE ORDER TYPE
 
-    cout << "Price: " << Prices[0] << endl; // PRINTS THE PRICE
-    cout << "Price: " << Prices[1] << endl; // PRINTS THE PRICE
+    // cout << "Price: " << Prices[0] << endl; // PRINTS THE PRICE
+    // cout << "Price: " << Prices[1] << endl; // PRINTS THE PRICE
 
     // while (true) // WHILE LOOP FOR THE MENU
     // {
@@ -164,5 +177,18 @@ int main()
     //     ProcessUserOption(UserOption); // Processes the UserOption
     // }
 
-    return 0; // Returns 0
+    OderBookEntry order1{10000,
+                         0.002,
+                         "2023/11/13 17:01:24.884492",
+                         "BTC/USD",
+                         OrderBookType::BID};
+
+    // order1.Price = 10000;
+    // order1.Amount = 0.002;
+    // order1.TimeStamp = "2023/11/13 17:01:24.884492";
+    // order1.Product = "BTC/USD";
+    // order1.OrderType = OrderBookType::BID;
+
+    cout << "Price: " << order1.Price << endl;
+    return 0;
 }
