@@ -21,12 +21,12 @@ public:
                   string _TimeStamp,
                   string _Product,
                   OrderBookType _OrderType)
+        : Price(_Price),
+          Amount(_Amount),
+          TimeStamp(_TimeStamp),
+          Product(_Product),
+          OrderType(_OrderType)
     {
-        Price = _Price;
-        Amount = _Amount;
-        TimeStamp = _TimeStamp;
-        Product = _Product;
-        OrderType = _OrderType;
     }
 
     double Price;
