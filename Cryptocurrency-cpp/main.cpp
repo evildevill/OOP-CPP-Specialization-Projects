@@ -177,11 +177,29 @@ int main()
     //     ProcessUserOption(UserOption); // Processes the UserOption
     // }
 
-    OderBookEntry order1{10000,
-                         0.002,
-                         "2023/11/13 17:01:24.884492",
-                         "BTC/USD",
-                         OrderBookType::BID};
+    vector<OderBookEntry> Orders;
+
+    // // OderBookEntry order1;
+
+    // OderBookEntry order2{2000,
+    //                      0.003,
+    //                      "2023/11/13 17:01:24.884492",
+    //                      "BTC/USD",
+    //                      OrderBookType::BID};
+
+    Orders.push_back(OderBookEntry{1000,
+                                   0.002,
+                                   "2023/11/13 17:01:24.884492",
+                                   "BTC/USD",
+                                   OrderBookType::BID});
+
+    Orders.push_back(OderBookEntry{2000,
+                                   0.002,
+                                   "2023/11/13 17:01:24.884492",
+                                   "BTC/USD",
+                                   OrderBookType::BID});
+
+    // Orders.push_back(order2);
 
     // order1.Price = 10000;
     // order1.Amount = 0.002;
@@ -189,6 +207,6 @@ int main()
     // order1.Product = "BTC/USD";
     // order1.OrderType = OrderBookType::BID;
 
-    cout << "Price: " << order1.Price << endl;
-    return 0;
+    cout << "Price: " << Orders[1].Price << endl;
+    // return 0;
 }
