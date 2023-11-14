@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <unistd.h>
-#include <cstdlib>
 
 using namespace std;
 
@@ -102,8 +100,6 @@ void ProcessUserOption(int UserOption)
     {
         cout << "Invalid Choice :(" << endl;
         cout << "Please enter a number between 1 to 7" << endl;
-        sleep(1);
-        system("cls");
     }
     else if (UserOption == 1)
     {
