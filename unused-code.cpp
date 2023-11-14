@@ -52,4 +52,6 @@ int main (){
     // order1.Product = "BTC/USD";
     // order1.OrderType = OrderBookType::BID;
 
+    // cout << "Price: " << Orders[1].Price << endl;
+    // return 0;
 }

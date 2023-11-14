@@ -151,6 +151,22 @@ int main()
                                    "BTC/USD",
                                    OrderBookType::BID});
 
-    cout << "Price: " << Orders[1].Price << endl;
-    return 0;
+    // Three ways to iterate over a vector
+
+    for (OderBookEntry &Order : Orders)
+    {
+        cout << "The Price is : " << Order.Price << endl;
+    }
+
+    for (unsigned int i = 0; i < Orders.size(); ++i)
+    {
+        cout << "The Price is : " << Orders[i].Price << endl;
+    }
+
+    for (unsigned int i = 0; i < Orders.size(); ++i)
+    {
+        cout << "The Price is : " << Orders.at(i).Price << endl;
+    }
+
+    // End of three ways to iterate over a vector
 }
