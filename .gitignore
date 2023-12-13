@@ -1,7 +1,8 @@
-*.exe
-.vscode
-python
-test.cpp
-1.cpp
-compre.cpp
-zlib.h
+# *.exe
+# .vscode
+# python
+# test.cpp
+# 1.cpp
+# compre.cpp
+# zlib.h
+# zconf.h
